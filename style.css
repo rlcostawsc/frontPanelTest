@@ -6,7 +6,7 @@ body{
 }
 
 
-@media screen  and (max-width: 450px) {
+
 body{
 	background-image: url('./img/bg-01.jpg') ; 
 background-repeat: no-repeat;
@@ -16,7 +16,7 @@ background-attachment: fixed;
 }
 header{
 	display: grid;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 10px;
     background-color: rgba(0,0,0,.4);
     justify-items: center;
@@ -32,6 +32,7 @@ div > img{
 	padding: 0px;
 	margin: 0px;
 	height: 70vh;
+	border: 5px solid green;
 }
 .navApp{
 	width: 162px;
@@ -42,10 +43,13 @@ div > img{
     display: flex;
    /*  border: 1px solid green; */
     padding:  10px;
+    padding-bottom: 60px;
     flex-direction: column;
     align-items: center;
+    border: 1px solid;
+    border-color: rgba(255,255,255,0.3);
     background-color: rgba(0, 0, 0, .4);
-    width: 90%;
+    width: auto;
     margin: auto;
     max-width: 450px;
 
@@ -123,127 +127,8 @@ div > img{
 }
 
 
-}
-
-/*Screen 900px*/
-
-@media screen  and (min-width: 451px) {
-body{
-	background-image: url('./img/bg-01.jpg') ; 
-background-repeat: no-repeat;
-background-position: inherit;
-background-size: inherit;
-background-attachment: fixed;
-}
-header{
-	display: grid;
-    border: 1px solid red;
-    padding: 10px;
-    background-color: rgba(0,0,0,.4);
-    justify-items: center;
-}
-div > img{
-	border: 1px solid blue;
-		width: auto;
-		height: 60px;
-}
-.panel{
-	/* display: flex; */
-	flex-direction: column;
-	padding: 0px;
-	margin: 0px;
-	height: 70vh;
-}
-.navApp{
-	width: 162px;
-	display: flex; 
-	border: 1px solid yellow;
-}
-.frm {
-    display: flex;
-   /*  border: 1px solid green; */
-    padding:  10px;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .4);
-    width: 90%;
-    margin: auto;
-    max-width: 450px;
-
-}
-.frm-head{
-	/* border: 1px solid yellow; */
-	width: 100%;
-	max-width: 350px;
-}
-
-.frm-head h1{
-	/* border: 1px solid blue; */
-	color: white;
-	font-weight: 300;
-	font-family: 'Roboto', sans-serif;
-}
-.frm-row{
-
-}
-.field{
-	margin-top: 10px;
-	/* border: 1px solid blue; */
-	width: 100%;
-	max-width: 350px;
-}
-.field input{
-	padding: 0px;
-	width: 100%;
-	height: 1.8rem;
-	border:  0px;
-}
-.field input[type="password"]{
-	width: 100%;
-	color: rgba(0, 0, 0, 0.4);
-	font-size: 1.4em;
-    font-weight: 600;
-    background-color: rgba(255,255,255,.3);
-}
-.field input[type="text"]{
-	margin-bottom: 1px;
-}
-
-.frm-ctl{
-	display: flex;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.frm-ctl *{
-	width: 100%;
-	border: 0px;
-	color: white;
-	font-size: 0.8em;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    max-width: 350px;
-}
-.frm-ctl a{
-	width: 100%;
-	border: 0px;
-	color: white;
-	font-size: 0.6em;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-}
-
-.frm button{
-	width: 100%;
-	color: rgba(255, 255, 255);
-	font-size: 1.8em;
-    font-weight: 300;
-    border: 0px;
-    background-color: rgba(0,128,255);
-    max-width: 350px;
-}
 
 
-}
 
 /* rada pá */
 .roda-pe{
