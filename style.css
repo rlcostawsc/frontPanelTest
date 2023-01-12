@@ -26,32 +26,33 @@ div > img{
 		width: auto;
 		height: 60px;
 }
-.panel{
-	display: flex;
-	flex-direction: column;
-	padding: 0px;
-	margin: 0px;
-	height: 70vh;
-	border: 5px solid green;
-}
 .navApp{
 	width: 162px;
 	display: flex; 
-	border: 1px solid yellow;
+	/* border: 1px solid yellow; */
+}
+
+.panel{
+	display: flex;
+	flex-direction: column;
+	place-items: end;
+	place-content: center;
+	padding: 0px;
+	margin: 0px;
+	height: 70vh;
 }
 .frm {
     display: flex;
-   /*  border: 1px solid green; */
-    padding:  10px;
+    margin-right: 130px;
+    height: 40vh;
+    padding: 10px;
+    padding-top: 20px;
     padding-bottom: 60px;
     flex-direction: column;
     align-items: center;
-    border: 1px solid;
-    border-color: rgba(255,255,255,0.3);
     background-color: rgba(0, 0, 0, .4);
-    width: auto;
-    margin: auto;
-    max-width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 400px;
 
 }
 .frm-head{
@@ -124,6 +125,7 @@ div > img{
     border: 0px;
     background-color: rgba(0,128,255);
     max-width: 350px;
+    margin-top: 30px;
 }
 
 
