@@ -7,24 +7,28 @@
 	body{
 		background-color: rgba(0, 0, 0, 0.4);
 	}
+
+	/*efeito abre e feche*/
+
 	.ctn{
-		border: 1px solid white;
+		/* border: 1px solid white; */
 		display: flex;
 	}
 	#left{
-		border: 1px solid red;
+		position: relative;
+		/* border: 1px solid red; */
 		height: 100vh;
 	}
 	.min{
 		width: 5vw;
-		transition: width 1.5s;
+		transition: width 0.5s;
 	}
 	.max{
-		width: 20vw;
-		transition: width 1.5s;
+		width: 30vw;
+		transition: width 0.5s;
 	}
 	#right{
-		border: 1px solid blue;
+		/* border: 1px solid blue; */
 		width: 95vw;
 		height: 100vh;
 	}
@@ -32,3 +36,78 @@
 	button{
 		width: 200px;
 	}
+
+	.btn_top_ext{
+		/* border: 1px solid white;  */
+		position: absolute; 
+		right: -15px; 
+		top:10px;
+		width: 36px;
+		height: 36px;
+		background: url('./img/bnt_menu_panel.png') 0 -2px;
+		border-radius: 50%;
+		z-index: 9;
+	}
+
+	.btn_top_rec{
+		/* border: 1px solid white;  */
+		position: absolute; 
+		right: -15px; 
+		top:10px;
+		width: 36px;
+		height: 36px;
+		background: url('./img/bnt_menu_panel.png') 36px -38px;
+		border-radius: 50%;
+		z-index: 9;
+	}
+
+	/**Estilização do side bar*/
+
+	#side-bar-top{
+		background-image: url('./img/bg_side_bar.png');
+		width: auto;
+		height: 174px;
+		background-size: auto;
+		background-position: center 0;
+		border:1px solid white; 
+		height: 330px
+	}
+	#brand-side-bar-top{
+	
+		/* border:1px solid white;  */
+		width: auto; 
+		height: 50px; 
+		color:white;
+		background-image: url('./img/header_logo_trackeo.png');
+		background-size: 70px 26px;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-top: 10px;
+	}
+	#btn_perfil{
+		display: block;
+		background-image: url('./img/btn_perfil.png');
+		width: 36px;
+		height: 36px;
+		background-size: 38px 38px;
+		margin: 40px auto auto;
+		border-radius: 50%;
+		border: 1px solid hsla(0,0%,100%,.3);
+		cursor: pointer;
+		background-position: 50%;
+		background-repeat: no-repeat;
+	}
+	#conta{
+		position: absolute;
+		left: 0px;
+		width: 100%;
+		display: inline-block;
+		padding: 0px 20px;
+		vertical-align: middle;
+		cursor: pointer;
+    background-color: rgba(144,147,153,.3);
+	}
+
+	
+
+
