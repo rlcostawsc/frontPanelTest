@@ -13,18 +13,23 @@
 	.ctn{
 		/* border: 1px solid white; */
 		display: flex;
+		background-color: #091826;
 	}
 	#left{
 		position: relative;
 		/* border: 1px solid red; */
 		height: 100vh;
+		background-color: #091826;
+		border: 1px solid yellow;
 	}
 	.min{
 		width: 5vw;
+		min-width: 80px;
 		transition: width 0.5s;
 	}
 	.max{
 		width: 30vw;
+		min-width: 100px;
 		transition: width 0.5s;
 	}
 	#right{
@@ -64,13 +69,13 @@
 	/**Estilização do side bar*/
 
 	#side-bar-top{
-		background-image: url('./img/bg_side_bar.png');
-		width: auto;
-		height: 174px;
-		background-size: auto;
-		background-position: center 0;
-		border:1px solid white; 
-		height: 330px
+		background-image: url(./img/bg_side_bar.png);
+    width: auto;
+    height: 150px;
+    background-size: auto;
+    background-position: center 0;
+    border: 1px solid white;
+    background-color: #091826;
 	}
 	#brand-side-bar-top{
 	
@@ -97,17 +102,69 @@
 		background-position: 50%;
 		background-repeat: no-repeat;
 	}
-	#conta{
-		position: absolute;
-		left: 0px;
-		width: 100%;
-		display: inline-block;
-		padding: 0px 20px;
-		vertical-align: middle;
+	.menu-list{
+		margin-top: 12px;
+		width: auto;
+		height: auto;
+		border: 1px solid red;
+	}
+	.menu-list ul{
+		width: auto;
+		color: white;
+	}
+	.menu-list ul li{
+		width:;
+		height: 20px;
+		border: 1px solid blue;
+		color: red;
+		background-image: url('./img/meu.png');
+		list-style: none;
 		cursor: pointer;
-    background-color: rgba(144,147,153,.3);
+	}
+	.btn-conta{
+		width: 18px;
+		margin: 10px auto;
+		background-position: 0 0;
+		background-origin: content-box;
+	}
+	.btn-business{
+		width: 18px;
+		margin: 10px auto;
+		background-position: -2px -42px;
+		background-origin: content-box;
+	}
+
+	.btn-add-costumer{
+		width: 18px;
+		margin: 10px auto;
+		background-position: -2px -82px;
+		background-origin: content-box;
+	}
+
+	.btn-add-device{
+		width: 19px;
+		margin: 10px auto;
+		background-position: -65px -159px;
+		background-origin: content-box;
 	}
 
 	
+	.btn-add-card{
+		width: 19px;
+		margin: 10px auto;
+		background-position: 0px -160px;
+		background-origin: content-box;
+	}
+
+	.btn-functions{
+		width: 19px;
+		margin: 10px auto;
+		background-position: -21px -120px;
+		background-origin: content-box;
+	}
+	ul div{
+		border: 1px solid white;
+		height: 50px;
+	}	
 
 
