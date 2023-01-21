@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 	*{
 		padding: 0px;
 		border: 0px;
@@ -121,30 +122,32 @@
 		cursor: pointer;
 	}
 
+/*css btn-menu lateral*/
+
 	.btn-conta{
 		width: 18px;
 		/* margin: 10px auto; */
-		background-position: 0 0;
+		background-position: 0 -18px;
 		background-origin: content-box;
 	}
 	.btn-business{
 		width: 18px;
 		/* margin: 10px auto; */
-		background-position: -2px -42px;
+		background-position: -2px -61px;
 		background-origin: content-box;
 	}
 
 	.btn-add-costumer{
 		width: 18px;
 		/* margin: 10px auto; */
-		background-position: -2px -82px;
+		background-position: -2px -100px;
 		background-origin: content-box;
 	}
 
 	.btn-add-device{
 		width: 19px;
 		/* margin: 10px auto; */
-		background-position: -65px -159px;
+		background-position: -65px -178px;
 		background-origin: content-box;
 	}
 
@@ -152,23 +155,73 @@
 	.btn-add-card{
 		width: 19px;
 		/* margin: 10px auto; */
-		background-position: 0px -160px;
+		background-position: 0px -179px;
 		background-origin: content-box;
 	}
 
-	.btn-functions{
+	.btn-function{
 		width: 19px;
 		/* margin: 10px auto; */
-		background-position: -21px -120px;
+		background-position: -21px -137px;
 		background-origin: content-box;
+	}
+
+
+	.btn-conta-active{
+		width: 18px;
+		/* margin: 10px auto; */
+		background-position: 0 0;
+		background-origin: content-box;
+	}
+	.btn-business-active{
+		width: 18px;
+		/* margin: 10px auto; */
+		background-position: -2px -61px;
+		background-origin: content-box;
+	}
+
+	.btn-add-costumer-active{
+		width: 18px;
+		/* margin: 10px auto; */
+		background-position: -2px -100px;
+		background-origin: content-box;
+	}
+
+	.btn-add-device-active{
+		width: 19px;
+		/* margin: 10px auto; */
+		background-position: -65px -178px;
+		background-origin: content-box;
+	}
+
+	
+	.btn-add-card-active{
+		width: 19px;
+		/* margin: 10px auto; */
+		background-position: 0px -179px;
+		background-origin: content-box;
+	}
+
+	.btn-functions-active{
+		width: 19px;
+		/* margin: 10px auto; */''
+		background-position: -21px -139px;
+		background-origin: content-box;
+	}
+
+
+	.btn-menu-active{
+		color: #b7653e;
 	}
 	ul div:hover{
 		background-color: #162e44;
 	}
 	li i{
 		position: absolute;
-		left: 25px;
-		color: white;
+		left: 35px;
+		color: #f9f3f0;
+		display: none;
+		font-family: 'Nunito Sans', sans-serif;
 	}
 	.btn-area-min{
 		display: flex;
@@ -181,11 +234,12 @@
 	.btn-area-max{
 		display: flex;
 		align-items: center;
+		margin-left: 10px;
 		height: 50px;
 		border-bottom: 1px solid #162e44;
 	}
 	.label-menu{
-		display: none;
+		display: block ;
 	}
 
 
