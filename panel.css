@@ -113,7 +113,7 @@
 		color: white;
 	}
 	.menu-list ul li{
-		width:;
+		
 		height: 20px;
 		/* border: 1px solid blue; */
 		color: red;
@@ -172,41 +172,47 @@
 		/* margin: 10px auto; */
 		background-position: 0 0;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 	.btn-business-active{
 		width: 18px;
 		/* margin: 10px auto; */
-		background-position: -2px -61px;
+		background-position: -2px -42px;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 
 	.btn-add-costumer-active{
 		width: 18px;
 		/* margin: 10px auto; */
-		background-position: -2px -100px;
+		background-position: -2px -82px;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 
 	.btn-add-device-active{
 		width: 19px;
 		/* margin: 10px auto; */
-		background-position: -65px -178px;
+		background-position: -65px -160px;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 
 	
 	.btn-add-card-active{
 		width: 19px;
 		/* margin: 10px auto; */
-		background-position: 0px -179px;
+		background-position: 0px -160px;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 
-	.btn-functions-active{
+	.btn-function-active{
 		width: 19px;
-		/* margin: 10px auto; */''
-		background-position: -21px -139px;
+		/* margin: 10px auto; */
+		background-position: -21px -120px;
 		background-origin: content-box;
+		background-color: #162e44;
 	}
 
 
@@ -215,6 +221,9 @@
 	}
 	ul div:hover{
 		background-color: #162e44;
+	}
+	.btn-area-active{
+		background-color: #162e44;	
 	}
 	li i{
 		position: absolute;

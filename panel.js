@@ -14,17 +14,28 @@ area.forEach((a)=>{
 })
 label.forEach((a)=>{
 	a.classList.contains('label-menu') ? a.classList.remove('label-menu')
-	:a.classList.add('label-menu')
-
-	console.log(label[0].classList);
+	:a.classList.add('label-menu');
 })
 
 	ctn.className = s;
 	btn_top.className= b;
 	
 }
-function active (target) {
 
-	const c = target.children[0].children[0].id;
-	console.log(c);
+function active (target) {
+	var btns = document.querySelectorAll("[data-btn=icon]");
+	var e = target.children[0];
+	btns.forEach((e)=>{
+		var c = e.className;
+
+		if(c.includes("-active")){
+			console.log(c+" achei")
+			var r = c.replace("-active","");
+			e.className = r;
+		}
+	});
+	e.className = e.className.concat('-active');
+	target.classList.contains('btn-area-active') 
+	? target.classList.remove('btn-area-active') 
+	: target.classList.add('btn-area-active') 
 }
