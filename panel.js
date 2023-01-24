@@ -1,56 +1,76 @@
 function go (argument) {
 	
-	var ctn = document.getElementById("left");
-	var btn_top = document.getElementById("btn_top");
-	var area = document.querySelectorAll('[id=btn-area]');
+	let panel_left = document.getElementById("left");
+	let btn_top = document.getElementById("btn_top");
+	let btn_area = document.querySelectorAll('[id=btn-area]');
 	const label = document.querySelectorAll('[data-label=label-menu]');
 
-	var s = ctn.className==="min" ? "max":"min";
-	var b = btn_top.className==="btn_top_rec" ? "btn_top_ext" : "btn_top_rec";
+	// open and close the left panel side
+	let panel_left_display = panel_left.classList.contains("min") ? 'max':'min';
+	panel_left.className = panel_left_display;
+
+
+	// define the display of button left panel side
+	let btn_top_display = btn_top.className==="btn_top_rec" ? "btn_top_ext" : "btn_top_rec";
+	btn_top.className= btn_top_display;
 	
-	area.forEach((a)=>{
-		var c = a.className === "btn-area-min" ? "btn-area-max":"btn-area-min";
-		a.className = c;
-	})
-	label.forEach((a)=>{
-		a.classList.contains('label-menu') ? a.classList.remove('label-menu')
-		:a.classList.add('label-menu');
+	
+	// make configurations view of exibtion of buttons to left panel side
+	btn_area.forEach((area)=>{
+		area.classList.contains('btn-area-min') ? 
+		area.classList.replace('btn-area-min', 'btn-area-max') :
+		area.classList.replace('btn-area-max', 'btn-area-min')
 	})
 
-	ctn.className = s;
-	btn_top.className= b;
+	// make the show or hide label button the left panel side
+	label.forEach((label)=>{
+		label.classList.contains('label-menu') ? label.classList.remove('label-menu')
+		:label.classList.add('label-menu');
+	})
+
+	
 	
 }
 
 function active (target) {
-	var btns = document.querySelectorAll("[data-btn=icon]");
-	let label = document.querySelectorAll('[data-label=label-menu');
-	var e = target.children[0];
-	var chd_label = target.children[0].children[0];
-	
-	btns.forEach((e)=>{
-		var c = e.className;
+	let data_btn_icon = document.querySelectorAll("[data-btn=icon]");
+	let label_menu = document.querySelectorAll('[data-label=label-menu');
+	let btn_area = document.querySelectorAll('[id=btn-area]');
+	let btn_icon = target.children[0];
+	let chldren_label = target.children[0].children[0];
 
-		if(c.includes("-active")){
-			var r = c.replace("-active","");
-			e.className = r;
+
+
+	// make the config of area button for active or no
+	if(!target.classList.contains('btn-area-active')){
+
+				btn_area.forEach((area)=>{
+					area.classList.contains('btn-area-active')?
+					area.classList.remove('btn-area-active'):'';
+				})
+				target.classList.add('btn-area-active');
+	}
+	
+	// make the show active or no active button icon
+	data_btn_icon.forEach((icon)=>{
+		let c_name = icon.className;
+
+		if(c_name.includes("-active")){
+			let replace_c_name = c_name.replace("-active","");
+			icon.className = replace_c_name;
 		}
 	});
 
-	label.forEach((l)=>{
-		if(l.classList.contains('btn-menu-active'))l.classList.remove('btn-menu-active');
+	// make the show exibition label button left menu side
+	label_menu.forEach((label_menu)=>{
+		if(label_menu.classList.contains('btn-menu-active'))label_menu.classList.remove('btn-menu-active');
 	})
 
-	e.className = e.className.concat('-active');
-	target.classList.contains('btn-area-active') 
-	? target.classList.remove('btn-area-active') 
-	: target.classList.add('btn-area-active') 
+	//config the area of icon
+	btn_icon.className = btn_icon.className.concat('-active');
 
-
-	console.log("styles ----->"+chd_label.id);
-
-		
-	chd_label.classList.add('btn-menu-active')
+	// config the label of button icon
+	chldren_label.classList.add('btn-menu-active')
 
 
 	}
