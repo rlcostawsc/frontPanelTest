@@ -424,3 +424,23 @@ li p{
 	background-image: url('./img/sprites_utils.png');
 	background-position: -44px -42px;
 }
+
+
+
+
+/* menu-panel de content */
+.menu-panel{
+	height: 30px;
+	border:  1px solid red;
+	display: flex;
+}
+.menu-item{
+	height: 30px;
+	border: 1px solid blue;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+.menu-item b{
+	border:  1px solid green;
+}
