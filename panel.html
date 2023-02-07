@@ -21,28 +21,28 @@
 
 				</div>
 				<div id="menu-list" class="menu-list">
-					<ul>
-						<div id="btn-area" class="btn-area-min" onclick="active(this)">
+					<ul class="">
+						<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-conta">
 							<li class="btn-conta-active" data-btn="icon"><p id="btn-conta" data-label
 								="label-menu" class="btn-menu-active">Conta</p></li>
 							</div>
-							<div id="btn-area" class="btn-area-min" onclick="active(this)">
+							<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-business">
 								<li class="btn-business" data-btn="icon"><p id="btn-business" data-label
 									="label-menu">Negócios</p></li>
 								</div>
-								<div id="btn-area" class="btn-area-min" onclick="active(this)">
+								<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-client">
 									<li class="btn-add-costumer" data-btn="icon"><p id="btn-add-costumer" data-label
 										="label-menu">Adicionar Clientes</p></li>
 									</div>
-									<div id="btn-area" class="btn-area-min" onclick="active(this)">
+									<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-device">
 										<li class="btn-add-device" data-btn="icon"><p id="btn-add-device" data-label
 											="label-menu">Adicionar dispositivos</p></li>
 										</div>
-										<div id="btn-area" class="btn-area-min" onclick="active(this)">
+										<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-card">
 											<li class="btn-add-card" data-btn="icon"><p id="btn-add-card" data-label
 												="label-menu">Cartão de crédito</p></li>
 											</div>
-											<div id="btn-area" class="btn-area-min" onclick="active(this)">
+											<div id="btn-area" class="btn-area-min" onclick="active(this)" data-item="aba-function">
 												<li class="btn-function" data-btn="icon"><p id="btn-functions" data-label
 													="label-menu">Funções</p></li>
 												</div>
@@ -80,16 +80,26 @@
 												</ul>
 											</div>
 										</div>
+										<!-- aba superior -->
 										<div class="menu-panel">
-											<div class="menu-item">DASH <b>x</b></div>
-											<div class="menu-item">CONTA <b>x</b></div>
-											<div class="menu-item">NEGÓCIOS <b>x</b></div>
-											<div class="menu-item">ADCIONAR CLIENTE <b>x</b></div>
-											<div class="menu-item">ADCIONAR DISPOSITIVO <b>x</b></div>
-											<div class="menu-item">CARTÃO DE CRÉDITO <b>x</b></div>
-											<div class="menu-item">FUNÇÕES <b>x</b></div>			
+											<ul class="panel">
+											<li data-id="aba-dash"class="panel-item it-atctive" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba ic-a"></i>DASH <i></i></li>
+											<li data-id="aba-conta" class="panel-item"><i id="panel-icon-aba" class="icon-aba" onclick="activelAba(this)"></i>CONTA <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											<li data-id="aba-business" class="panel-item" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba"></i>NEGÓCIOS <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											<li data-id="aba-client" class="panel-item" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba"></i>ADCIONAR CLIENTE <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											<li data-id="aba-device" class="panel-item" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba"></i>ADCIONAR DISPOSITIVO <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											<li data-id="aba-card" class="panel-item" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba"></i>CARTÃO DE CRÉDITO <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											<li data-id="aba-function" class="panel-item" onclick="activelAba(this)"><i id="panel-icon-aba" class="icon-aba"></i>FUNÇÕES <i  onclick="closeAba(this)" class="icon-aba-close"></i></li>
+											</ul>		
 										</div>
-
+										<!-- panel de conteudo da aba -->
+										<div data-name="aba-dash" class="aba aba-active" style="width:100%; height:82vh; border:1px solid green;" >dash</div>
+										<div data-name="aba-conta" class="aba" style="width:100%; height:82vh; border:1px solid green;" >conta</div>
+										<div data-name="aba-business" class="aba" style="width:100%; height:82vh; border:1px solid green;" >negocios</div>
+										<div data-name="aba-client" class="aba" style="width:100%; height:82vh; border:1px solid green;" >cliente</div>
+										<div data-name="aba-device" class="aba" style="width:100%; height:82vh; border:1px solid green;" >dispositivo</div>
+										<div data-name="aba-card" class="aba" style="width:100%; height:82vh; border:1px solid green;" >credito</div>
+										<div data-name="aba-function" class="aba" style="width:100%; height:82vh; border:1px solid green;" >funções</div>
 									</div>
 								</div>
 								<script type="text/javascript" src="./panel.js"></script>

@@ -15,6 +15,7 @@ body{
 
 .ctn{
 	/* border: 1px solid white; */
+	width: 100vw;
 	display: flex;
 	background-color: #091826;
 }
@@ -432,15 +433,46 @@ li p{
 .menu-panel{
 	height: 30px;
 	border:  1px solid red;
+}
+.panel{
+	list-style: none;
 	display: flex;
 }
-.menu-item{
+.panel-item{
+	display: none;
+	border: 1px solid #dbe1e5;
 	height: 30px;
-	border: 1px solid blue;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
+	width: max-content;
+	align-items: center;
+	gap: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+
 }
-.menu-item b{
-	border:  1px solid green;
+.it-atctive{
+	display: flex;
+}
+.aba{
+	display: none;
+}
+.aba-active{
+	display: block;
+}
+.icon-aba{
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	background-image: url('./img/sprites_utils.png');
+	background-position: -209px -134px;
+}
+.ic-a{
+
+}
+.icon-aba-close{
+	display: inline-block;
+	width: 15px;
+	height: 17px;
+	background-image: url('./img/sprites_utils.png');
+	background-position: -113px -220px;
 }

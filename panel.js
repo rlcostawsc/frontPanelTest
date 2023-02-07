@@ -72,5 +72,45 @@ function active (target) {
 	// config the label of button icon
 	chldren_label.classList.add('btn-menu-active')
 
+	openAba(target);
+	activePanelAba (target);
+	}
 
+
+	function openAba (btn) {
+		// obtem o nome da btn menu e ativa a aba superior correpondente
+		let btn_menu = btn.getAttribute("data-item");
+		let aba = document.querySelector('li[data-id='+btn_menu+']')
+		aba.classList.add('it-atctive');
+	}
+	function activePanelAba (btn) {
+		// desativando abas ativas.
+		const panels = document.querySelectorAll('div[data-name]');
+		panels.forEach((c)=>{
+			c.classList.remove('aba-active');
+		});
+
+		// ativando a panel aba target do evento
+		const tgt = btn.getAttribute('data-item');
+		const aba = document.querySelector('div[data-name='+tgt+']');
+		// console.log('->'+tgt+" -->"+aba);
+		aba.classList.add('aba-active');
+
+	}
+	function activelAba (btn) {
+		// desativando abas ativas.
+		const panels = document.querySelectorAll('div[data-name]');
+		panels.forEach((c)=>{
+			c.classList.remove('aba-active');
+		});
+
+		// ativando a aba target do evento
+		const tgt = btn.getAttribute('data-id');
+		const aba = document.querySelector('div[data-name='+tgt+']');
+		aba.classList.add('aba-active');
+		// console.log('->'+tgt+" -->"+aba);
+
+	}
+	function closeAba(e){
+		e.parentElement.classList.remove('it-atctive');
 	}
