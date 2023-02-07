@@ -80,7 +80,7 @@ function active (target) {
 	function openAba (btn) {
 		// obtem o nome da btn menu e ativa a aba superior correpondente
 		let btn_menu = btn.getAttribute("data-item");
-		let aba = document.querySelector('li[data-id='+btn_menu+']')
+		let aba = document.querySelector('li[data-item='+btn_menu+']')
 		aba.classList.add('it-atctive');
 	}
 	function activePanelAba (btn) {
@@ -105,7 +105,7 @@ function active (target) {
 		});
 
 		// ativando a aba target do evento
-		const tgt = btn.getAttribute('data-id');
+		const tgt = btn.getAttribute('data-item');
 		const aba = document.querySelector('div[data-name='+tgt+']');
 		aba.classList.add('aba-active');
 		// console.log('->'+tgt+" -->"+aba);
