@@ -73,15 +73,19 @@ function active (target) {
 	chldren_label.classList.add('btn-menu-active')
 
 	openAba(target);
-	activePanelAba (target);
 	}
 
 
+
+// functions for controlle of aba
+let lastAbaActive="";
 	function openAba (btn) {
 		// obtem o nome da btn menu e ativa a aba superior correpondente
 		let btn_menu = btn.getAttribute("data-item");
 		let aba = document.querySelector('li[data-item='+btn_menu+']')
-		aba.classList.add('it-atctive');
+		aba.classList.add('it-active');
+
+		console.log('ultima aba->'+lastAbaActive);
 	}
 	function activePanelAba (btn) {
 		// desativando abas ativas.
@@ -95,22 +99,20 @@ function active (target) {
 		const aba = document.querySelector('div[data-name='+tgt+']');
 		// console.log('->'+tgt+" -->"+aba);
 		aba.classList.add('aba-active');
-
 	}
-	function activelAba (btn) {
-		// desativando abas ativas.
-		const panels = document.querySelectorAll('div[data-name]');
-		panels.forEach((c)=>{
-			c.classList.remove('aba-active');
-		});
 
-		// ativando a aba target do evento
-		const tgt = btn.getAttribute('data-item');
+	function closeAba(target){
+		const parent = target.parentElement;
+		parent.classList.remove('it-active')
+		const tgt = parent.getAttribute('data-item');
 		const aba = document.querySelector('div[data-name='+tgt+']');
-		aba.classList.add('aba-active');
-		// console.log('->'+tgt+" -->"+aba);
+		// console.log('->'+tgt+" -->"+aba.getAttribute('data-name'));
+		// console.log('ultima aba close'+lastAbaActive);
+		aba.classList.remove('aba-active');
 
 	}
-	function closeAba(e){
-		e.parentElement.classList.remove('it-atctive');
+	function getLastAbaActive () {
+		let lastAba = document.querySelector('div.aba-active');
+		console.log("---->"+lastAba.getAttribute('data-name'));
 	}
+
