@@ -2,90 +2,53 @@
 <html>
 <head>
 	<title>Restaurante Prato do Dia</title>
-  <style>
-      body {
-      background-image: url('https://cdn.pixabay.com/photo/2017/02/15/10/39/food-2068217_960_720.jpg');
-      background-size: cover;
-      background-position: center;
-      font-family: sans-serif;
-    }
+	<style>
+		body {
+			background-image: url('https://www.example.com/background-image.jpg');
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
 
-.background {
-	background-image: url('prato.jpg');
-	background-size: cover;
-	background-position: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			padding: 20px;
+		}
 
-.overlay {
-	background-color: rgba(0,0,0,0.5);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+		h1 {
+			font-size: 3rem;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 20px;
+		}
 
-.content {
-	position: relative;
-	z-index: 1;
-	padding: 50px;
-	text-align: center;
-	color: #fff;
-}
+		.btn-whatsapp {
+			display: inline-block;
+			background-color: #25D366;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 1.5rem;
+			margin-top: 20px;
+		}
 
-h1 {
-	font-size: 60px;
-	margin-bottom: 20px;
-	text-shadow: 2px 2px #000;
-}
-
-ul {
-	list-style: none;
-	padding: 0;
-	margin-bottom: 30px;
-}
-
-li {
-	font-size: 24px;
-	margin-bottom: 10px;
-}
-
-a {
-	display: inline-block;
-	padding: 10px 30px;
-	background-color: #ff6f00;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 30px;
-	transition: all 0.3s ease;
-}
-
-a:hover {
-	background-color: #fff;
-	color: #ff6f00;
-}
-
-  </style>
+		.btn-whatsapp:hover {
+			background-color: #128C7E;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-	<div class="background">
-		<div class="overlay"></div>
-	</div>
-	<div class="content">
+	<div class="container">
 		<h1>Restaurante Prato do Dia</h1>
-		<p>Confira nosso cardápio especial para hoje!</p>
-		<ul>
-			<li>Prato 1</li>
-			<li>Prato 2</li>
-			<li>Prato 3</li>
-		</ul>
-		<a href="#">Faça sua reserva</a>
+		<a href="https://wa.me/SEUNUMERODOTELEFONE" class="btn-whatsapp">Faça sua reserva pelo WhatsApp</a>
 	</div>
 </body>
 </html>
