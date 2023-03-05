@@ -27,9 +27,7 @@ function go (argument) {
 		label.classList.contains('label-menu') ? label.classList.remove('label-menu')
 		:label.classList.add('label-menu');
 	})
-
-	
-	
+		
 }
 
 function active (target) {
@@ -73,6 +71,7 @@ function active (target) {
 	chldren_label.classList.add('btn-menu-active')
 
 	openAba(target);
+	activePanelAba (target);
 	}
 
 
@@ -80,14 +79,15 @@ function active (target) {
 // functions for controlle of aba
 let lastAbaActive="";
 	function openAba (btn) {
+		getLastAbaActive();
 		// obtem o nome da btn menu e ativa a aba superior correpondente
 		let btn_menu = btn.getAttribute("data-item");
 		let aba = document.querySelector('li[data-item='+btn_menu+']')
 		aba.classList.add('it-active');
-
-		console.log('ultima aba->'+lastAbaActive);
 	}
+
 	function activePanelAba (btn) {
+		getLastAbaActive();
 		// desativando abas ativas.
 		const panels = document.querySelectorAll('div[data-name]');
 		panels.forEach((c)=>{
@@ -102,6 +102,7 @@ let lastAbaActive="";
 	}
 
 	function closeAba(target){
+	getLastAbaActive();
 		const parent = target.parentElement;
 		parent.classList.remove('it-active')
 		const tgt = parent.getAttribute('data-item');
@@ -111,8 +112,10 @@ let lastAbaActive="";
 		aba.classList.remove('aba-active');
 
 	}
+
 	function getLastAbaActive () {
-		let lastAba = document.querySelector('div.aba-active');
-		console.log("---->"+lastAba.getAttribute('data-name'));
+		let lastAba = document.querySelectorAll('div.aba-active');
+		console.log("---->"+lastAba[0].getAttribute('data-name'));
 	}
+
 
